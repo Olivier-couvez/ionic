@@ -1,0 +1,7 @@
+{
+  "name": "calculCercle",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
