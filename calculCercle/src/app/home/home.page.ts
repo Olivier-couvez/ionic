@@ -24,7 +24,7 @@ export class Cercle {
     this.rayon = r;
   }
   public Perimetre(): number {
-    return Math.round(2 * 3.1415 * this.rayon * 100) / 100;
+    return Math.round((2 * 3.1415 * this.rayon * 100) / 100);
   }
 
   public Surface(): number {
