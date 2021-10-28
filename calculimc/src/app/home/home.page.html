@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            FormeProfil
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">FormeProfil</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-item>
+        <ion-label floating color="primary"> age :</ion-label>
+        <ion-input #age type="number" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating color="primary"> taille en cm :</ion-label>
+        <ion-input #taille type="number" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating color="primary"> poids en kg :</ion-label>
+        <ion-input #poids type="number" value=""></ion-input>
+    </ion-item>
+    <!--Sélection du genre-->
+    <ion-label floating color="primary"> Sexe</ion-label>
+    <ion-list>
+        <ion-button colr="tertiary" *ngFor=" let gender of genresPossibles" (click)="selectionGenre(gender)"> {{gender}}</ion-button>
+    </ion-list>
+    <!--Sélection de l'activité-->
+    <ion-label floating color="primary"> Taux d'activité physique</ion-label>
+    <ion-list>
+        <ion-button colr="tertiary" *ngFor=" let activite of listeActivites" (click)="selectionActivite(activite)"> {{activite}}</ion-button>
+    </ion-list>
+    <!-- Bouton de validation -->
+    <br>
+
+    <ion-button expand="full" color="warning" (click)="CalculerPoidsImc(taille.value, poids.value, age.value )">
+        Calcul du poids ideal
+    </ion-button>
+
+    <br>
+    <ion-item>
+        <ion-label floating color="primary">Votre IMC : </ion-label>
+        <ion-input type="number" [(ngModel)]="IMC" readonly="true"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+        <ion-label floating color="primary">Votre poids ideal : </ion-label>
+        <ion-input type="number" [(ngModel)]="poidsIdeal" readonly="true"></ion-input>
+        <ion-label floating color="primary"> kg </ion-label>
+    </ion-item>
+    <br>
+    <ion-item>
+        <ion-label floating color="primary">Votre besoin en calories : </ion-label>
+        <ion-input type="number" [(ngModel)]="besoinsCalories" readonly="true"></ion-input>
+        <ion-label floating color="primary"> cal </ion-label>
+    </ion-item>
+</ion-content>

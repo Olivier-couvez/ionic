@@ -1,0 +1,7 @@
+{
+  "name": "nbmystere",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

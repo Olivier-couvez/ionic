@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "calculimc",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

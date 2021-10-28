@@ -1,0 +1,7 @@
+{
+  "name": "calculimc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
