@@ -1,9 +1,36 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>pagemodale</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>pagemodale</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+    <ion-item>
+        <ion-buttons slot="end">
+            <ion-button color="warning" (click)="closeModal()">Fermer</ion-button>
+            <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-buttons>
+    </ion-item>
+    <br>
+    <ion-item>
+        <ion-label color="primary">Données max : </ion-label>
+        <p>{{dataEnvoyeesm}}</p>
+        <ion-label color="primary">Données coup : </ion-label>
+        <p>{{dataEnvoyeesc}}</p>
+    </ion-item>
+    <br>
+    <ion-item>
+        <ion-label color="primary"> Nombre max :</ion-label>
+        <ion-input #nbm input="number"></ion-input>
+        <ion-button (click)="setNbm(nbm.value)" color="success">
+            <ion-icon name="checkmark-outline"></ion-icon>
+        </ion-button>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary"> Nb coup :</ion-label>
+        <ion-input #nbc input="number"></ion-input>
+        <ion-button (click)="setNbc(nbc.value)" color="success">
+            <ion-icon name="checkmark-outline"></ion-icon>
+        </ion-button>
+    </ion-item>
 </ion-content>

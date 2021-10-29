@@ -1,0 +1,7 @@
+{
+  "name": "nbmysterenew",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

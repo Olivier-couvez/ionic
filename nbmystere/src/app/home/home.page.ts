@@ -14,6 +14,8 @@ export class HomePage {
   nbTentatives: number;
   min: number;
   max: number;
+  dataATransmettrec: number;
+  dataATransmettrem: number;
   constructor(public modalCtrl: ModalController) {
     this.nbessais = 10;
     this.min = 0;
@@ -33,7 +35,21 @@ export class HomePage {
     this.result = '';
   }
   async openModale() {
-    const modal = await this.modalCtrl.create({ component: PagemodalePage });
+    this.donneesok(this.nbTentatives, this.max);
+    const modal = await this.modalCtrl.create({
+      component: PagemodalePage,
+      componentProps: {
+        dataEnvoyeesc: this.dataATransmettrec,
+        dataEnvoyeesm: this.dataATransmettrem
+      },
+    });
+    modal.onWillDismiss().then((dataRetuned) => {
+      this.nbTentatives = dataRetuned.data;
+    }); //on recupère les données du modal
     return await modal.present();
+  }
+  donneesok(nc: number, nm: number) {
+    this.dataATransmettrec = nc;
+    this.dataATransmettrec = nm;
   }
 }
