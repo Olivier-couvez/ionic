@@ -1,0 +1,7 @@
+{
+  "name": "pagemodale",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

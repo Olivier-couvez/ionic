@@ -12,10 +12,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'regles',
-    loadChildren: () => import('./regles/regles.module').then( m => m.ReglesPageModule)
-  },
-  {
     path: 'pagemodale',
     loadChildren: () => import('./pagemodale/pagemodale.module').then( m => m.PagemodalePageModule)
   },

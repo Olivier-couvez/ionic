@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { randomInt } from 'crypto';
-import { Alert } from 'selenium-webdriver';
-//import { AlertController } from 'ionic-angular';
+import { ModalController } from '@ionic/angular';
+import { PagemodalePage } from '../pagemodale/pagemodale.page';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +14,7 @@ export class HomePage {
   nbTentatives: number;
   min: number;
   max: number;
-  constructor(public alertCtrl: AlertController) {
+  constructor(public modalCtrl: ModalController) {
     this.nbessais = 10;
     this.min = 0;
     this.max = 100;
@@ -25,7 +24,6 @@ export class HomePage {
 
   public verifPropo(proposition: number) {
     //test propo et maj variable reponse result
-    this.showAlert('imc ok');
     this.result = 'Ok';
   }
 
@@ -34,13 +32,8 @@ export class HomePage {
     this.nombremystere = Math.floor(Math.random() * 100);
     this.result = '';
   }
-
-  showAlert(message) {
-    const alert = this.alertCtrl.create({
-      title: 'Atenção',
-      subTitle: message,
-      buttons: ['OK']
-    });
-    alert.present();
+  async openModale() {
+    const modal = await this.modalCtrl.create({ component: PagemodalePage });
+    return await modal.present();
   }
 }

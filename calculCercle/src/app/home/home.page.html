@@ -11,28 +11,28 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-item>
-    <ion-label floating color="primary">Rayon du cercle :</ion-label>
-    <ion-input #rayon type="number" value=""></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label floating color="primary">Rayon du cercle :</ion-label>
+      <ion-input #rayon type="number" value=""></ion-input>
+    </ion-item>
 
-  <!-- Bouton de validation-->
-  <br />
+    <!-- Bouton de validation-->
+    <br />
 
-  <ion-button
-    expand="block"
-    color="danger"
-    (click)="CalculsCercle(rayon.value)"
-  >
-    Calcul de la surface et du périmètre
-  </ion-button>
+    <ion-button
+      expand="block"
+      color="danger"
+      (click)="CalculsCercle(rayon.value)"
+    >
+      Calcul de la surface et du périmètre
+    </ion-button>
 
-  <br />
-  <ion-item>
-    <ion-label floating color="primary">La surface du cercle : </ion-label>
-    <ion-input type="number" [(ngModel)]="surface" readonly="true"></ion-input>
-    <ion-label floating color="primary"> cm²</ion-label>
-  </ion-item>
+    <br />
+    <ion-item>
+      <ion-label floating color="primary">La surface du cercle : </ion-label>
+      <ion-input type="number" [(ngModel)]="surface" readonly="true"></ion-input>
+      <ion-label floating color="primary"> cm²</ion-label>
+    </ion-item>
   <br />
   <ion-item>
     <ion-label floating color="primary">Le périmètre de cercle : </ion-label>

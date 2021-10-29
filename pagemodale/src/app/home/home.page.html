@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+        <ion-item>
+            <ion-title>
+                HomePage: Demo modale
+            </ion-title>
+            <ion-button color="warning" (click)="openModale()">Ouvrir_Modale</ion-button>
+        </ion-item>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-item>
+        <ion-label color="secondary">message</ion-label>
+        <ion-input #message type="text"></ion-input>
+        <ion-item>
+            <ion-buttons slot="end">
+                <ion-button color="success" (click)="textOk(message.value)">Valider</ion-button>
+                <ion-icon name="checkmark-sharp"></ion-icon>
+            </ion-buttons>
+        </ion-item>
+    </ion-item>
+    <ion-item>
+        <ion-label floating color="primary"> Réponse du modal: </ion-label>
+        <ion-input type="number" [(ngModel)]="reponse" readonly="true"></ion-input>
+    </ion-item>
+</ion-content>

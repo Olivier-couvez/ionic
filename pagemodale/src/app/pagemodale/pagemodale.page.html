@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>pagemodale</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-buttons slot="end">
+            <ion-button color="warning" (click)="closeModal()">Fermer</ion-button>
+            <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-buttons>
+    </ion-item>
+    <br>
+    <ion-item>
+        <ion-label color="primary">Données reçues : </ion-label>
+        <p>{{dataEnvoyees}}</p>
+    </ion-item>
+    <br>
+    <ion-item>
+        <ion-label color="primary"> Nombre à envoyer vers la page mère :</ion-label>
+        <ion-input #nb input="number"></ion-input>
+        <ion-button (click)="setNb(nb.value)" color="success">
+            <ion-icon name="checkmark-outline"></ion-icon>
+        </ion-button>
+    </ion-item>
+</ion-content>
