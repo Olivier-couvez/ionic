@@ -1,20 +1,44 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+
+    <ion-toolbar color="primary">
+        <ion-item>
+            <ion-title>
+                Nb Mystère
+            </ion-title>
+            <ion-button color="warning" href="/regles">Règles</ion-button>
+            <ion-button color="warning" (click)="parametres()">Paramètres</ion-button>
+        </ion-item>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Nombre Mystere</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-item>
+        <ion-label floating color="primary"> votre proposition :</ion-label>
+        <ion-input #proposition type="number" value="" readonly="false"></ion-input>
+        <ion-button expand="full" color="warning" (click)="soumettreProposition(proposition.value)">
+            Soumettre
+        </ion-button>
+    </ion-item>
+    <ion-item>
+        <ion-label floating color="primary"> Réponse: </ion-label>
+        <ion-input type="text" [(ngModel)]="reponse" readonly="true"></ion-input>
+    </ion-item>
+    <ion-button expand="full" color="warning" (click)="razJeu()">
+        Nouveau
+    </ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-item>
+        <ion-label floating color="primary"> Nombre d'essai(s) : </ion-label>
+        <ion-input type="text" [(ngModel)]="nbEssais" readonly="true"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating color="primary"> Valeur maximum : </ion-label>
+        <ion-input type="text" [(ngModel)]="max" readonly="true"></ion-input>
+    </ion-item>
+
 </ion-content>

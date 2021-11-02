@@ -1,9 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>parametres</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-item>
+            <ion-title color="tertiary">parametres</ion-title>
+            <ion-button color="danger" (click)="dismiss()">Retour</ion-button>
+        </ion-item>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+    <ion-label>nb d'essais : {{mesEssais}}</ion-label>
+    <br>
+    <ion-label>valeur max : {{valmax}}</ion-label><br>
+    <ion-item>
+        <ion-label color="primary"> Nb d'essais</ion-label>
+        <ion-input #essais input="number"></ion-input>
+        <ion-button (click)="setNbEssais(essais.value)" color="success">
+            <ion-icon name="checkmark-outline"></ion-icon>
+        </ion-button>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary"> Valeur Maximale</ion-label>
+        <ion-input #max input="number"></ion-input>
+        <ion-button (click)="setMax(max.value)" color="success">
+            <ion-icon name="checkmark-outline"></ion-icon>
+        </ion-button>
+    </ion-item>
 </ion-content>
