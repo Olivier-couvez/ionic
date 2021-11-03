@@ -8,54 +8,144 @@
   <ion-item>
     <ion-label floating color="primary"> Nombre de personne :</ion-label>
     <ion-input #nbPersonne type="number" value="" readonly="false" placeholder="Nombre de part"></ion-input>
-    <ion-button expand="block" color="warning" (click)="calculProportion(nbPersonne.value)">
+    <ion-button size="medium" expand="block" color="warning" (click)="calculProportion(nbPersonne.value)">
       Calcul
     </ion-button>
   </ion-item>
 
-  <ion-item>
-    <ion-input position="fixed" type="number" [(ngModel)]="caramel" readonly="true"></ion-input>
-    <ion-label text-wrap color="primary">Cuillère(s) à soupe de caramel au beurre salé</ion-label>
-  </ion-item>
+  <ion-grid>
+    <ion-row class="ion-justify-content-start">
+      <ion-col size="2">
+        <div>
+          <ion-input type="number" [(ngModel)]="caramel" readonly="true">
+          </ion-input>
+        </div>
+      </ion-col>
+      <ion-col size="10">
+        <div>
+          <ion-label text-align-center text-wrap color="primary">Cuillère(s) à soupe de caramel au
+            beurre salé</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   <br>
-  <ion-item>
-    <ion-label text-wrap color="primary">Abricots :</ion-label>
-    <ion-input type="number" [(ngModel)]="abrimin" readonly="true"></ion-input>
-    <ion-label text-wrap color="primary"> à </ion-label>
-    <ion-input type="number" [(ngModel)]="abrimax" readonly="true"></ion-input>
-    <ion-label> pièces</ion-label>
-  </ion-item>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-start">
+      <ion-col size="2.5">
+        <div>
+          <ion-label text-wrap color="primary">Abricots :</ion-label>
+        </div>
+      </ion-col>
+      <ion-col size="2">
+        <div>
+          <ion-input type="number" [(ngModel)]="abrimin" readonly="true"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col size="1">
+        <div>
+          <ion-label text-wrap color="primary"> à </ion-label>
+        </div>
+      </ion-col>
+      <ion-col size="2">
+        <div>
+          <ion-input type="number" [(ngModel)]="abrimax" readonly="true"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col size="2">
+        <div>
+          <ion-label> pièces</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   <br>
-  <ion-item>
-    <ion-label text-wrap color="primary">Pâte feuilletée : </ion-label>
-    <ion-input type="number" [(ngModel)]="patefeuille" readonly="true"></ion-input>
-    <ion-label text-wrap color="primary"> g</ion-label>
-  </ion-item>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-start">
+      <ion-col size="4">
+        <div>
+          <ion-label text-wrap color="primary">Pâte feuilletée : </ion-label>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div>
+          <ion-input type="number" [(ngModel)]="patefeuille" readonly="true"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div>
+          <ion-label text-wrap color="primary"> g</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   <br>
-  <ion-item>
-    <ion-input type="number" [(ngModel)]="cuilcasso" readonly="true"></ion-input>
-    <ion-label text-wrap color="primary"> Cuillère(s) à soupe de cassonade</ion-label>
-  </ion-item>
+  <ion-grid>
+    <ion-row class="ion-justify-content-start">
+      <ion-col size="2">
+        <div>
+          <ion-input type="number" [(ngModel)]="cuilcasso" readonly="true"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col size="10">
+        <div>
+          <ion-label text-wrap color="primary"> Cuillère(s) à soupe de cassonade</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <br>
-  <ion-item>
-    <ion-label text-wrap color="primary">Beurre demi-sel : </ion-label>
-    <ion-input type="number" [(ngModel)]="beurre" readonly="true"></ion-input>
-    <ion-label text-wrap color="primary"> g</ion-label>
-  </ion-item>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-start">
+      <ion-col size="4">
+        <div>
+          <ion-label text-wrap color="primary">Beurre demi-sel : </ion-label>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div>
+          <ion-input type="number" [(ngModel)]="beurre" readonly="true"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div>
+          <ion-label text-wrap color="primary"> g</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   <br>
-  <ion-label text-wrap color="primary">Eclats de pistaches, noisettes et amandes</ion-label>
+  <ion-label text-wrap color="primary"> Eclats de pistaches, noisettes et amandes</ion-label>
   <br>
-  <ion-item>
-    <ion-input type="number" [(ngModel)]="amandes" readonly="true"></ion-input>
-    <ion-label text-wrap color="primary"> Cuillère(s) à soupe d’amandes effilées</ion-label>
-  </ion-item>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-start">
+      <ion-col size="2">
+        <div>
+          <ion-input type="number" [(ngModel)]="amandes" readonly="true"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col size="10">
+        <div>
+          <ion-label text-wrap color="primary"> Cuillère(s) à soupe d’amandes effilées</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   <br>
-  <ion-button color="danger" (click)="dismiss()">Ok</ion-button>
+  <ion-button size="large" color="danger" (click)="dismiss()">
+    <ion-icon name="backspace"></ion-icon>
+    Ok
+  </ion-button>
   <br>
   <br>
 
-  <ion-item>
-    <ion-label position="Floating">Floating Labedfslgkndfgl</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
 </ion-content>
