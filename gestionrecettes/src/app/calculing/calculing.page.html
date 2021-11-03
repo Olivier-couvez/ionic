@@ -7,14 +7,14 @@
 <ion-content>
   <ion-item>
     <ion-label floating color="primary"> Nombre de personne :</ion-label>
-    <ion-input #nbPersonne type="number" value="" readonly="false"></ion-input>
+    <ion-input #nbPersonne type="number" value="" readonly="false" placeholder="Nombre de part"></ion-input>
     <ion-button expand="block" color="warning" (click)="calculProportion(nbPersonne.value)">
       Calcul
     </ion-button>
   </ion-item>
 
   <ion-item>
-    <ion-input floating type="number" [(ngModel)]="caramel" readonly="true"></ion-input>
+    <ion-input position="fixed" type="number" [(ngModel)]="caramel" readonly="true"></ion-input>
     <ion-label text-wrap color="primary">Cuillère(s) à soupe de caramel au beurre salé</ion-label>
   </ion-item>
   <br>
@@ -51,4 +51,11 @@
   </ion-item>
   <br>
   <ion-button color="danger" (click)="dismiss()">Ok</ion-button>
+  <br>
+  <br>
+
+  <ion-item>
+    <ion-label position="Floating">Floating Labedfslgkndfgl</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
 </ion-content>
