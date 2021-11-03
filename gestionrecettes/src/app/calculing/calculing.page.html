@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title size="large">Calcul des quantité</ion-title>
+    <ion-title size="large">Calcul des quantités</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,32 +14,41 @@
   </ion-item>
 
   <ion-item>
-    <ion-input type="number" [(ngModel)]="caramel" readonly="true"></ion-input>
-    <ion-label color="primary">Cuillère à soupe de caramel au beurre salé</ion-label>
+    <ion-input floating type="number" [(ngModel)]="caramel" readonly="true"></ion-input>
+    <ion-label text-wrap color="primary">Cuillère(s) à soupe de caramel au beurre salé</ion-label>
   </ion-item>
   <br>
-
-  <ion-label text-wrap color="primary">Abricots :</ion-label>
-  <ion-input type="number" [(ngModel)]="abrimin" readonly="true"></ion-input>
-  <ion-label> à </ion-label>
-  <ion-input type="number" [(ngModel)]="abrimax" readonly="true"></ion-input>
-  <ion-label> pièces</ion-label>
+  <ion-item>
+    <ion-label text-wrap color="primary">Abricots :</ion-label>
+    <ion-input type="number" [(ngModel)]="abrimin" readonly="true"></ion-input>
+    <ion-label text-wrap color="primary"> à </ion-label>
+    <ion-input type="number" [(ngModel)]="abrimax" readonly="true"></ion-input>
+    <ion-label> pièces</ion-label>
+  </ion-item>
   <br>
-
-  <ion-label text-wrap color="primary">Pâte feuilletée : </ion-label>
-  <ion-input type="number" [(ngModel)]="patefeuille" readonly="true"></ion-input>
-  <ion-label text-wrap color="primary"> g</ion-label>
+  <ion-item>
+    <ion-label text-wrap color="primary">Pâte feuilletée : </ion-label>
+    <ion-input type="number" [(ngModel)]="patefeuille" readonly="true"></ion-input>
+    <ion-label text-wrap color="primary"> g</ion-label>
+  </ion-item>
   <br>
-  <ion-input type="number" [(ngModel)]="cuilcasso" readonly="true"></ion-input>
-  <ion-label text-wrap color="primary">1 Cuillère à soupe de cassonade</ion-label>
+  <ion-item>
+    <ion-input type="number" [(ngModel)]="cuilcasso" readonly="true"></ion-input>
+    <ion-label text-wrap color="primary"> Cuillère(s) à soupe de cassonade</ion-label>
+  </ion-item>
   <br>
-  <ion-input type="number" [(ngModel)]="beurre" readonly="true"></ion-input>
-  <ion-label text-wrap color="primary">Beurre demi-sel : 50 g</ion-label>
+  <ion-item>
+    <ion-label text-wrap color="primary">Beurre demi-sel : </ion-label>
+    <ion-input type="number" [(ngModel)]="beurre" readonly="true"></ion-input>
+    <ion-label text-wrap color="primary"> g</ion-label>
+  </ion-item>
   <br>
   <ion-label text-wrap color="primary">Eclats de pistaches, noisettes et amandes</ion-label>
   <br>
-  <ion-input type="number" [(ngModel)]="amandes" readonly="true"></ion-input>
-  <ion-label text-wrap color="primary">1 Cuillère à soupe d’amandes effilées</ion-label>
+  <ion-item>
+    <ion-input type="number" [(ngModel)]="amandes" readonly="true"></ion-input>
+    <ion-label text-wrap color="primary"> Cuillère(s) à soupe d’amandes effilées</ion-label>
+  </ion-item>
   <br>
   <ion-button color="danger" (click)="dismiss()">Ok</ion-button>
 </ion-content>

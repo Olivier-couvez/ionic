@@ -15,10 +15,10 @@ export class RecettettPage implements OnInit {
   }
 
   async calculing() {
-       const modalcalculing = await this.modalCtrl.create({
+    const modalcalculing = await this.modalCtrl.create({
       component: CalculingPage
-       });
-        modalcalculing.onDidDismiss().then((dataRetuned) => { });
+    });
+    modalcalculing.onDidDismiss().then();
     return await modalcalculing.present();
   }
 }
